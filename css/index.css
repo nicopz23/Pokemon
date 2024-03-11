@@ -1,0 +1,57 @@
+#logo{
+    width: 200px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.barra-menu{
+    display: none;
+}
+.estilo-menu{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+}
+.estilo-menu a{
+    display: block;
+    text-decoration: none;
+    margin: 7px;
+    font-size: 25px;
+}
+#menu-movil li:nth-child(-n+2){
+    border-right: 1px solid blue;
+}
+#loading{
+    display: block;
+    margin:0 auto;
+}
+@media screen and (max-width: 450px) {
+    h1{
+
+        display: none;
+    }
+    header{
+        justify-content: space-around;
+    }
+    .estilo-menu a{
+        font-size: 17px;
+    }
+    .estilo-menu{
+        display: inline;
+    }
+    .menu-movil{
+        display: none;
+    }
+    .barra-menu{
+        display: block;
+    }
+    #menu-movil li:nth-child(-n+2){
+        border-right: none;
+    }
+}
+    
