@@ -1,77 +1,109 @@
-#logo{
+#logo {
     width: 200px;
 }
-header{
+
+header {
     display: flex;
     justify-content: space-between;
 }
-.container{
+
+.container {
     width: 80%;
     margin: 0 auto;
 }
-.barra-menu{
+
+.barra-menu {
     display: none;
 }
-.estilo-menu{
+
+.estilo-menu {
     list-style: none;
     display: flex;
 }
-.estilo-menu a{
+
+.estilo-menu a {
     display: block;
     text-decoration: none;
     margin: 7px;
     font-size: 25px;
 }
-#menu-movil li:nth-child(-n+2){
-    border-right: 1px solid blue;
+
+#menu-movil li:nth-child(-n+2) {
+    border-right: 1px solid black;
 }
-#loading{
+
+#loading {
     display: block;
-    margin:0 auto;
+    margin: 0 auto;
     display: none;
 }
-#containerpk article{
+
+#containerpk article {
     width: 20%;
-    border: 1px solid blue;
+    border: 1px solid black;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 7px;
 }
-#containerpk{
+
+#containerpk {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-#containerpk article img{
+
+#containerpk article img {
     width: 80px;
 }
 
+.navegacion {
+    text-align: right;
+    margin-right: 10px;
+}
+
+#next {
+    margin-left: 10px;
+}
+
+#next,
+#previous {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 450px) {
-    h1{
+    h1 {
         display: none;
     }
-    header{
+
+    header {
         justify-content: space-around;
     }
-    .estilo-menu a{
+
+    .estilo-menu a {
         font-size: 17px;
     }
-    .estilo-menu{
+
+    .estilo-menu {
         display: inline;
     }
-    .menu-movil{
+
+    .menu-movil {
         display: none;
     }
-    .barra-menu{
+
+    .barra-menu {
         display: block;
     }
-    #menu-movil li:nth-child(-n+2){
+
+    #menu-movil li:nth-child(-n+2) {
         border-right: none;
     }
-    #containerpk article{
+
+    #containerpk article {
         width: 100%;
-        border: 1px solid blue;
+        border: 1px solid black;
         border-radius: 5px;
         display: flex;
         align-content: center;
@@ -79,4 +111,3 @@ header{
         align-items: center;
     }
 }
-    
