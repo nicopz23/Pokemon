@@ -26,12 +26,20 @@ window.onload = () => {
 
     buttonNextBottom.onclick = () => {
         getDataUrl(next)
+        setTimeout(scrollToTopOnMobile, 100);
     }
 
     buttonPreviousBottom.onclick = () => {
         getDataUrl(previous)
+        setTimeout(scrollToTopOnMobile, 100);
     }
 
+    function scrollToTopOnMobile() {
+        if (window.innerWidth <= 850) { // Verificar si el ancho de la ventana es menor o igual a 450px (es decir, dispositivo móvil)
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Desplazar suavemente hacia arriba
+        }
+    }
+    
     let url = "https://pokeapi.co/api/v2/pokemon";
 
     getDataUrl(url);
