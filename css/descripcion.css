@@ -1,6 +1,8 @@
 body {
     background-image: url("../img/diseño_fondo.jpg");
     background-size: cover;
+    /*background-repeat: no-repeat;*/
+    background-position: center;
 }
 #logo {
     width: 200px;
@@ -32,4 +34,62 @@ header {
 
 #menu-movil li:nth-child(-n+2) {
     border-right: 1px solid black;
+}
+.conclusion {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.conclusion h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.conclusion p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 450px) {
+    h1 {
+        display: none;
+    }
+
+    header {
+        justify-content: space-around;
+    }
+
+    .estilo-menu a {
+        font-size: 17px;
+    }
+
+    .estilo-menu {
+        display: inline;
+    }
+
+    .menu-movil {
+        display: none;
+    }
+
+    .barra-menu {
+        display: block;
+    }
+
+    #menu-movil li:nth-child(-n+2) {
+        border-right: none;
+    }
+
+    #containerpk article {
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 5px;
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
 }

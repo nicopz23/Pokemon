@@ -45,7 +45,7 @@ header {
 
 #containerpk article {
     width: 20%;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -76,6 +76,87 @@ header {
 #previous {
     cursor: pointer;
 }
+
+.container article {
+    border: 3px solid black;
+}
+
+.container article.grass {
+    border-color: green;
+}
+
+.container article.fire {
+    border-color: red;
+}
+
+.container article.water {
+    border-color: blue;
+}
+
+.container article.bug {
+    border-color: #186706;
+}
+
+.container article.dark {
+    border-color: black;
+}
+
+.container article.dragon {
+    border-color: #001A84;
+}
+
+.container article.electric {
+    border-color: yellow;
+}
+
+.container article.fairy {
+    border-color: #ff8ac5;
+}
+
+.container article.fighting {
+    border-color: #8A1000;
+}
+
+.container article.flying {
+    border-color: #FFFFFF;
+}
+
+.container article.ghost {
+    border-color: #D891EF;
+}
+
+.container article.ground {
+    border-color: #8d4925;
+}
+
+.container article.ice {
+    border-color: #84b6f4;
+}
+
+.container article.normal {
+    border-color: #666666;
+}
+
+.container article.psychic {
+    border-color: #ffa8d9;
+}
+
+.container article.rock {
+    border-color: #d0aa8c;
+}
+
+.container article.steel {
+    border-color: gray;
+}
+
+.container article.sinister {
+    border-color: #1b1b1b;
+}
+
+.container article.poison {
+    border-color: #7000E0;
+}
+
 
 
 @media screen and (max-width: 450px) {

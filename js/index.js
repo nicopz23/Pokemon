@@ -52,6 +52,8 @@ function cargarDatosPokemon(listanueva) {
 }
 
 function extractInfoPokemon(info) {
+    let firstType = info.types[0].type.name.split(',')[0].trim();
+
     pokemon[info.name] = {
         img:info.sprites.other["official-artwork"].front_default,
         //img: info.sprites.front_default,
@@ -66,6 +68,8 @@ function extractInfoPokemon(info) {
     texto[0].innerHTML = pokemon[info.name].types;
     texto[1].innerHTML = pokemon[info.name].id;
     texto[2].innerHTML = pokemon[info.name].experience;
+
+    document.getElementById(info.name).classList.add(firstType);
 }
 
 function mostrarDatosIniciales(listapk) {
