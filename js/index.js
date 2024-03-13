@@ -1,6 +1,6 @@
 var pokemon = {};
 var next = {};
-var previous = {}; 
+var previous = {};
 
 window.onload = () => {
     let menu = document.getElementById("barras-menu");
@@ -18,6 +18,17 @@ window.onload = () => {
     }
     let buttonPrevious = document.getElementById("previous");
     buttonPrevious.onclick = () => {
+        getDataUrl(previous)
+    }
+
+    let buttonNextBottom = document.getElementById("next-bottom");
+    let buttonPreviousBottom = document.getElementById("previous-bottom");
+
+    buttonNextBottom.onclick = () => {
+        getDataUrl(next)
+    }
+
+    buttonPreviousBottom.onclick = () => {
         getDataUrl(previous)
     }
 
@@ -55,7 +66,7 @@ function extractInfoPokemon(info) {
     let firstType = info.types[0].type.name.split(',')[0].trim();
 
     pokemon[info.name] = {
-        img:info.sprites.other["official-artwork"].front_default,
+        img: info.sprites.other["official-artwork"].front_default,
         //img: info.sprites.front_default,
         types: info.types.map(t => t.type.name),
         id: info.id,
@@ -104,13 +115,17 @@ function getDataUrl(url) {
         .then(data => {
             if (data.next == null) {
                 document.getElementById("next").style.display = "none";
+                document.getElementById("next-bottom").style.display = "none";
             } else {
                 document.getElementById("next").style.display = "inline";
+                document.getElementById("next-bottom").style.display = "inline";
             }
             if (data.previous == null) {
                 document.getElementById("previous").style.display = "none";
+                document.getElementById("previous-bottom").style.display = "none";
             } else {
                 document.getElementById("previous").style.display = "inline";
+                document.getElementById("previous-bottom").style.display = "inline";
             }
             next = data.next;
             previous = data.previous;
