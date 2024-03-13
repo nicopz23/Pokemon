@@ -1,0 +1,35 @@
+body {
+    background-image: url("../img/diseño_fondo.jpg");
+    background-size: cover;
+}
+#logo {
+    width: 200px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.barra-menu {
+    display: none;
+}
+
+.estilo-menu {
+    list-style: none;
+    display: flex;
+}
+
+.estilo-menu a {
+    display: block;
+    text-decoration: none;
+    margin: 7px;
+    font-size: 25px;
+}
+
+#menu-movil li:nth-child(-n+2) {
+    border-right: 1px solid black;
+}

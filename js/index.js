@@ -1,6 +1,6 @@
 var pokemon = {};
 var next = {};
-var previous = {}
+var previous = {}; 
 
 window.onload = () => {
     let menu = document.getElementById("barras-menu");
@@ -53,8 +53,8 @@ function cargarDatosPokemon(listanueva) {
 
 function extractInfoPokemon(info) {
     pokemon[info.name] = {
-        //img:info.sprites.other.oficcial-artwork.front_default,
-        img: info.sprites.front_default,
+        img:info.sprites.other["official-artwork"].front_default,
+        //img: info.sprites.front_default,
         types: info.types.map(t => t.type.name),
         id: info.id,
         experience: info.base_experience

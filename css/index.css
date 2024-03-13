@@ -1,3 +1,8 @@
+body {
+    background-image: url("../img/diseño_fondo.jpg");
+    background-size: cover;
+}
+
 #logo {
     width: 200px;
 }
@@ -71,6 +76,7 @@ header {
 #previous {
     cursor: pointer;
 }
+
 
 @media screen and (max-width: 450px) {
     h1 {
