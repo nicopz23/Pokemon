@@ -78,6 +78,77 @@ header {
 #previous-bottom {
     cursor: pointer;
 }
+.popup {
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 50%; /
+    max-width: 400px; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    animation: zoom-in 0.3s forwards;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+.popup-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+}
+.popup-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+.popup-content h2 {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.popup-content #weaknesses-container {
+    margin-bottom: 20px;
+}
+
+.popup-content #primary-ability {
+    margin-bottom: 20px;
+}
+
+.popup-content #evolutions-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content #evolutions-container img {
+    width: 80px;
+    height: 80px;
+    margin: 0 10px;
+}
+
+@keyframes zoom-in {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
 
 .container article {
     border: 3px solid black;
@@ -198,5 +269,21 @@ header {
         align-content: center;
         flex-direction: column;
         align-items: center;
+    }
+    .popup-content {
+        padding: 20px;
+    }
+
+    .popup-content h2 {
+        font-size: 20px;
+    }
+
+    .popup-content p {
+        font-size: 16px;
+    }
+
+    .popup-content #evolutions-container img {
+        width: 60px;
+        height: 60px;
     }
 }
