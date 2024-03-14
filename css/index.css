@@ -78,6 +78,7 @@ header {
 #previous-bottom {
     cursor: pointer;
 }
+
 .popup {
     position: fixed;
     top: 50%; 
